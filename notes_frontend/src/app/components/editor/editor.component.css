@@ -1,0 +1,49 @@
+.editor {
+  height: calc(100vh - 56px);
+  padding: 20px 24px;
+  overflow: auto;
+  background: #ffffff;
+}
+
+.title-input {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #111827;
+  padding: 8px 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.title-input:focus {
+  border-bottom-color: #ff9800; /* accent */
+}
+
+.content-input {
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 14px 12px;
+  outline: none;
+  resize: none;
+  line-height: 1.5;
+  font-size: 0.98rem;
+  color: #1f2937;
+  background: #fafafa;
+}
+.content-input:focus {
+  border-color: #ff9800; /* accent */
+  box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.15);
+  background: #ffffff;
+}
+
+.empty-editor {
+  height: calc(100vh - 56px);
+  display: grid;
+  place-items: center;
+  color: #6b7280;
+  font-size: 0.98rem;
+}

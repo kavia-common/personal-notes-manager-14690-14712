@@ -1,0 +1,27 @@
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <button class="create-btn" (click)="onCreate()" aria-label="Create note">+ New Note</button>
+  </div>
+
+  <div class="list" *ngIf="(notesService.notes$ | async) as notes">
+    <ng-container *ngIf="notes.length; else noNotes">
+      <a
+        *ngFor="let n of notes"
+        class="item"
+        [routerLink]="['/notes', n.id]"
+        routerLinkActive="active"
+        (click)="setSelected(n.id)"
+        [title]="n.title || 'Untitled'"
+      >
+        <div class="item-main">
+          <div class="title">{{ n.title || 'Untitled' }}</div>
+          <div class="meta">{{ n.updatedAt | date:'MMM d, y, h:mm a' }}</div>
+        </div>
+        <button class="delete-btn" (click)="onDelete(n.id, $event)" aria-label="Delete note">✕</button>
+      </a>
+    </ng-container>
+    <ng-template #noNotes>
+      <div class="empty">No notes yet. Create your first note.</div>
+    </ng-template>
+  </div>
+</aside>

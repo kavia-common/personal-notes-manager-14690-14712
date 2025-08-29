@@ -1,0 +1,8 @@
+<app-topbar title="Personal Notes"></app-topbar>
+
+<div class="content">
+  <app-sidebar (create)="handleCreate()" (delete)="handleDelete($event)"></app-sidebar>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

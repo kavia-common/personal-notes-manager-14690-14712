@@ -1,0 +1,21 @@
+<div class="editor" *ngIf="note() as n">
+  <input
+    class="title-input"
+    [value]="n.title"
+    (input)="onTitleInput($any($event.target)?.value ?? '')"
+    placeholder="Untitled"
+    aria-label="Note title"
+  />
+
+  <textarea
+    class="content-input"
+    [value]="n.content"
+    (input)="onContentInput($any($event.target)?.value ?? '')"
+    placeholder="Start typing your note..."
+    aria-label="Note content"
+  ></textarea>
+</div>
+
+<div class="empty-editor" *ngIf="!note()">
+  Select a note from the sidebar or create a new one.
+</div>
