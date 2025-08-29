@@ -1,0 +1,15 @@
+.topbar {
+  height: 56px;
+  background-color: #1976d2; /* primary */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.title {
+  font-size: 1.125rem;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
